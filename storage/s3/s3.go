@@ -5,12 +5,13 @@ import (
 	"context"
 	"crypto/tls"
 	"errors"
-	"github.com/aws/aws-sdk-go/aws/request"
 	"io"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	"github.com/aws/aws-sdk-go/aws/request"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
@@ -32,7 +33,6 @@ type S3Storage struct {
 	retryCnt      uint
 	retryInterval time.Duration
 	ctx           context.Context
-	listMarker    *string
 	rlBucket      ratelimit.Bucket
 }
 
@@ -105,7 +105,7 @@ func (st *S3Storage) WithRateLimit(limit int) error {
 
 // List S3 bucket and send founded objects to chan.
 func (st *S3Storage) List(output chan<- *storage.Object) error {
-	listObjectsFn := func(p *s3.ListObjectsOutput, lastPage bool) bool {
+	listObjectsFn := func(p *s3.ListObjectsV2Output, lastPage bool) bool {
 		for _, o := range p.Contents {
 			key, _ := url.QueryUnescape(aws.StringValue(o.Key))
 			key = strings.Replace(key, st.prefix, "", 1)
@@ -117,19 +117,17 @@ func (st *S3Storage) List(output chan<- *storage.Object) error {
 				IsLatest:     aws.Bool(true),
 			}
 		}
-		st.listMarker = p.Marker
 		return !lastPage // continue paging
 	}
 
-	input := &s3.ListObjectsInput{
+	input := &s3.ListObjectsV2Input{
 		Bucket:       st.awsBucket,
 		Prefix:       aws.String(st.prefix),
 		MaxKeys:      aws.Int64(st.keysPerReq),
 		EncodingType: aws.String(s3.EncodingTypeUrl),
-		Marker:       st.listMarker,
 	}
 
-	if err := st.awsSvc.ListObjectsPagesWithContext(st.ctx, input, listObjectsFn); err != nil {
+	if err := st.awsSvc.ListObjectsV2PagesWithContext(st.ctx, input, listObjectsFn); err != nil {
 		return err
 	}
 	storage.Log.Debugf("Listing bucket finished")
