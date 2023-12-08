@@ -1,8 +1,8 @@
 package collection
 
 import (
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // UploadObjectData read objects from input, put its content and meta to Target storage and send object to next pipeline steps.

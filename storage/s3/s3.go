@@ -20,7 +20,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/larrabee/ratelimit"
 
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // S3Storage configuration.

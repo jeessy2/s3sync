@@ -15,9 +15,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3manager"
+	"github.com/jeessy2/s3sync/storage"
+	s3backend "github.com/jeessy2/s3sync/storage/s3"
 	"github.com/larrabee/ratelimit"
-	"github.com/larrabee/s3sync/storage"
-	s3backend "github.com/larrabee/s3sync/storage/s3"
 )
 
 // S3StreamStorage configuration.

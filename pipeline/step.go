@@ -1,9 +1,10 @@
 package pipeline
 
 import (
-	"github.com/larrabee/s3sync/storage"
 	"sync"
 	"sync/atomic"
+
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // StepFn implement the type of pipeline Step function.

@@ -14,8 +14,8 @@ import (
 	"github.com/gosuri/uilive"
 	"github.com/sirupsen/logrus"
 
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 var cli argsParsed

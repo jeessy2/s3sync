@@ -1,9 +1,9 @@
 package collection
 
 import (
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 	"github.com/larrabee/ratelimit"
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
 	"github.com/sirupsen/logrus"
 )
 

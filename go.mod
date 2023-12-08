@@ -1,4 +1,4 @@
-module github.com/larrabee/s3sync
+module github.com/jeessy2/s3sync
 
 go 1.18
 

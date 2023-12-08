@@ -17,7 +17,7 @@ import (
 	"github.com/gophercloud/gophercloud/pagination"
 	"github.com/larrabee/ratelimit"
 
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // Storage configuration.

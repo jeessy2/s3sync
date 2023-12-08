@@ -2,10 +2,11 @@
 package pipeline
 
 import (
-	"github.com/larrabee/s3sync/storage"
-	"github.com/sirupsen/logrus"
 	"sync"
 	"time"
+
+	"github.com/jeessy2/s3sync/storage"
+	"github.com/sirupsen/logrus"
 )
 
 // Log implement Logrus logger for debug logging.

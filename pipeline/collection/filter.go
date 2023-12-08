@@ -1,10 +1,11 @@
 package collection
 
 import (
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
 	"path/filepath"
 	"strings"
+
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // FilterObjectsByExt accepts an input object and checks if it matches the filter.

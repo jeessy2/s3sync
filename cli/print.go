@@ -3,9 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/sirupsen/logrus"
 	"time"
+
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/sirupsen/logrus"
 )
 
 func printLiveStats(ctx context.Context, syncGroup *pipeline.Group) {

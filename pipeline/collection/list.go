@@ -1,8 +1,8 @@
 package collection
 
 import (
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // ListSourceStorage list files in source storage and send it's to next pipeline steps.

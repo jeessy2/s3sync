@@ -12,7 +12,7 @@ import (
 	"github.com/alexflint/go-arg"
 	"github.com/mattn/go-isatty"
 
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 var (

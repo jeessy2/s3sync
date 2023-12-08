@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/pipeline/collection"
-	"github.com/larrabee/s3sync/storage"
-	"github.com/larrabee/s3sync/storage/fs"
-	"github.com/larrabee/s3sync/storage/s3"
-	"github.com/larrabee/s3sync/storage/s3stream"
-	"github.com/larrabee/s3sync/storage/swift"
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/pipeline/collection"
+	"github.com/jeessy2/s3sync/storage"
+	"github.com/jeessy2/s3sync/storage/fs"
+	"github.com/jeessy2/s3sync/storage/s3"
+	"github.com/jeessy2/s3sync/storage/s3stream"
+	"github.com/jeessy2/s3sync/storage/swift"
 )
 
 func setupStorages(ctx context.Context, syncGroup *pipeline.Group, cli *argsParsed) error {

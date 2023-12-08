@@ -4,8 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws/awserr"
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // PipelineError implement wrapper for pipeline errors.

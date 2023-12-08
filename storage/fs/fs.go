@@ -12,9 +12,9 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/jeessy2/s3sync/storage"
 	"github.com/karrick/godirwalk"
 	"github.com/larrabee/ratelimit"
-	"github.com/larrabee/s3sync/storage"
 	"github.com/pkg/xattr"
 )
 

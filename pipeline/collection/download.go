@@ -2,8 +2,8 @@
 package collection
 
 import (
-	"github.com/larrabee/s3sync/pipeline"
-	"github.com/larrabee/s3sync/storage"
+	"github.com/jeessy2/s3sync/pipeline"
+	"github.com/jeessy2/s3sync/storage"
 )
 
 // LoadObjectMeta accepts an input object and downloads its metadata.
